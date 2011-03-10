@@ -1,0 +1,244 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		585D7AD913291FCF001501F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D7AD813291FCF001501F0 /* main.m */; };
+		585D7AE41329204B001501F0 /* Gespenst.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D7AE31329204B001501F0 /* Gespenst.m */; };
+		585D7AED132921F6001501F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 585D7AEC132921F6001501F0 /* AppDelegate.m */; };
+		585D7AEF13292439001501F0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585D7AEE13292439001501F0 /* WebKit.framework */; };
+		585D7AF113292456001501F0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 585D7AF013292456001501F0 /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		585D7ACF13291FCF001501F0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		585D7AD113291FCF001501F0 /* gespenstjs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gespenstjs; sourceTree = BUILT_PRODUCTS_DIR; };
+		585D7AD813291FCF001501F0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		585D7ADB13291FCF001501F0 /* GespenstJS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GespenstJS-Prefix.pch"; sourceTree = "<group>"; };
+		585D7ADC13291FCF001501F0 /* GespenstJS.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = GespenstJS.1; sourceTree = "<group>"; };
+		585D7AE21329204B001501F0 /* Gespenst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gespenst.h; sourceTree = "<group>"; };
+		585D7AE31329204B001501F0 /* Gespenst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gespenst.m; sourceTree = "<group>"; };
+		585D7AEB132921F6001501F0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		585D7AEC132921F6001501F0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		585D7AEE13292439001501F0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		585D7AF013292456001501F0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = ../../../../../System/Library/Frameworks/Cocoa.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		585D7ACE13291FCF001501F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				585D7AEF13292439001501F0 /* WebKit.framework in Frameworks */,
+				585D7AF113292456001501F0 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		585D7AC613291FCF001501F0 = {
+			isa = PBXGroup;
+			children = (
+				585D7AD713291FCF001501F0 /* GespenstJS */,
+				585D7AD413291FCF001501F0 /* Frameworks */,
+				585D7AD213291FCF001501F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		585D7AD213291FCF001501F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				585D7AD113291FCF001501F0 /* gespenstjs */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		585D7AD413291FCF001501F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				585D7AF013292456001501F0 /* Cocoa.framework */,
+				585D7AEE13292439001501F0 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		585D7AD713291FCF001501F0 /* GespenstJS */ = {
+			isa = PBXGroup;
+			children = (
+				585D7AD813291FCF001501F0 /* main.m */,
+				585D7ADC13291FCF001501F0 /* GespenstJS.1 */,
+				585D7ADA13291FCF001501F0 /* Supporting Files */,
+				585D7AE21329204B001501F0 /* Gespenst.h */,
+				585D7AE31329204B001501F0 /* Gespenst.m */,
+				585D7AEB132921F6001501F0 /* AppDelegate.h */,
+				585D7AEC132921F6001501F0 /* AppDelegate.m */,
+			);
+			path = GespenstJS;
+			sourceTree = "<group>";
+		};
+		585D7ADA13291FCF001501F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				585D7ADB13291FCF001501F0 /* GespenstJS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		585D7AD013291FCF001501F0 /* GespenstJS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 585D7ADF13291FCF001501F0 /* Build configuration list for PBXNativeTarget "GespenstJS" */;
+			buildPhases = (
+				585D7ACD13291FCF001501F0 /* Sources */,
+				585D7ACE13291FCF001501F0 /* Frameworks */,
+				585D7ACF13291FCF001501F0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GespenstJS;
+			productName = GespenstJS;
+			productReference = 585D7AD113291FCF001501F0 /* gespenstjs */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		585D7AC813291FCF001501F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = isdead.info;
+			};
+			buildConfigurationList = 585D7ACB13291FCF001501F0 /* Build configuration list for PBXProject "GespenstJS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 585D7AC613291FCF001501F0;
+			productRefGroup = 585D7AD213291FCF001501F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				585D7AD013291FCF001501F0 /* GespenstJS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		585D7ACD13291FCF001501F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				585D7AD913291FCF001501F0 /* main.m in Sources */,
+				585D7AE41329204B001501F0 /* Gespenst.m in Sources */,
+				585D7AED132921F6001501F0 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		585D7ADD13291FCF001501F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		585D7ADE13291FCF001501F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		585D7AE013291FCF001501F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GespenstJS/GespenstJS-Prefix.pch";
+				PRODUCT_NAME = gespenstjs;
+			};
+			name = Debug;
+		};
+		585D7AE113291FCF001501F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GespenstJS/GespenstJS-Prefix.pch";
+				PRODUCT_NAME = gespenstjs;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		585D7ACB13291FCF001501F0 /* Build configuration list for PBXProject "GespenstJS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				585D7ADD13291FCF001501F0 /* Debug */,
+				585D7ADE13291FCF001501F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		585D7ADF13291FCF001501F0 /* Build configuration list for PBXNativeTarget "GespenstJS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				585D7AE013291FCF001501F0 /* Debug */,
+				585D7AE113291FCF001501F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 585D7AC813291FCF001501F0 /* Project object */;
+}

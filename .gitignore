@@ -1,0 +1,8 @@
+# Xcode >4
+*.pbxuser
+*.mode?v?
+build/
+
+# Xcode 4
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
