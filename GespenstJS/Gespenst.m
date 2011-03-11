@@ -139,7 +139,7 @@
     
     if ([[[fileName pathExtension] lowercaseString] isEqualToString:@".pdf"]) {
         NSData *data = [view dataWithPDFInsideRect:rect];
-        [data writeToFile:@"/Users/uasi/Desktop/data.pdf" atomically:NO];
+        [data writeToFile:fileName atomically:NO];
         return YES;
     }
     
