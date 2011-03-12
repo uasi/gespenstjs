@@ -110,7 +110,7 @@
                                                  encoding:NSUTF8StringEncoding
                                                     error:NULL];
     if (script == nil) {
-        fprintf(stderr, "Can't open %s", [fileName cStringUsingEncoding:NSUTF8StringEncoding]);
+        fprintf(stderr, "Can't open %s\n", [fileName cStringUsingEncoding:NSUTF8StringEncoding]);
         exit(1);
     }
     [self setScript:script];
