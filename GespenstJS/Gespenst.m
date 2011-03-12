@@ -137,7 +137,22 @@
     NSView *view = [[[[self webView] mainFrame] frameView] documentView];
     NSRect rect = [view bounds];
     
-    if ([[[fileName pathExtension] lowercaseString] isEqualToString:@".pdf"]) {
+    NSURL *fileURL = [NSURL fileURLWithPath:fileName];
+    NSString *filePath = [fileURL path];
+    NSString *dirPath = [[fileURL URLByDeletingLastPathComponent] path];
+    NSFileManager *manager = [[[NSFileManager alloc] init] autorelease];
+
+    if (![manager fileExistsAtPath:dirPath]) {
+        BOOL ok = [manager createDirectoryAtPath:dirPath
+                     withIntermediateDirectories:YES
+                                      attributes:nil
+                                           error:NULL];
+        if (!ok) {
+            return NO;
+        }
+    }
+    
+    if ([[[filePath pathExtension] lowercaseString] isEqualToString:@"pdf"]) {
         NSData *data = [view dataWithPDFInsideRect:rect];
         [data writeToFile:fileName atomically:NO];
         return YES;
