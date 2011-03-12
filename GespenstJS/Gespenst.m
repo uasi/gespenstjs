@@ -133,15 +133,11 @@
 
 - (BOOL)render:(NSString *)fileName
 {
-    [[self webView] setMediaStyle:@"screen"];
-    NSView *view = [[[[self webView] mainFrame] frameView] documentView];
-    NSRect rect = [view bounds];
-    
     NSURL *fileURL = [NSURL fileURLWithPath:fileName];
     NSString *filePath = [fileURL path];
     NSString *dirPath = [[fileURL URLByDeletingLastPathComponent] path];
     NSFileManager *manager = [[[NSFileManager alloc] init] autorelease];
-
+    
     if (![manager fileExistsAtPath:dirPath]) {
         BOOL ok = [manager createDirectoryAtPath:dirPath
                      withIntermediateDirectories:YES
@@ -152,14 +148,23 @@
         }
     }
     
+    [[self webView] setMediaStyle:@"screen"];
+    NSView *view = [[[[self webView] mainFrame] frameView] documentView];
+    NSRect rect = [view bounds];
+    
+    // Render PDF
     if ([[[filePath pathExtension] lowercaseString] isEqualToString:@"pdf"]) {
         NSData *data = [view dataWithPDFInsideRect:rect];
         [data writeToFile:fileName atomically:NO];
         return YES;
     }
     
-    // TODO
-    NSLog(@"PNG rendering is not implemented yet");
+    // Render PNG
+    NSBitmapImageRep *rep = [[self webView] bitmapImageRepForCachingDisplayInRect:rect];
+    [[self webView] cacheDisplayInRect:rect toBitmapImageRep:rep];
+    NSData *data = [rep representationUsingType:NSPNGFileType
+                                     properties:nil];
+    [data writeToFile:filePath atomically:NO];
     
     return NO;
 }
