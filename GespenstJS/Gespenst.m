@@ -32,6 +32,7 @@
 @synthesize script = script_;
 @synthesize state = state_;
 @dynamic content;
+@dynamic userAgent;
 
 - (id)init
 {
@@ -74,22 +75,6 @@
 {
     [self setLoadStatus:(success ? @"success" : @"fail")];
     [[[self webView] windowScriptObject] evaluateWebScript:[self script]];
-}
-
-- (id)valueForKey:(NSString *)key
-{
-    if ([key isEqualToString:@"content_"])
-        return [self content];
-    
-    return [super valueForKey:key];
-}
-
-- (void)setValue:(id)value forKey:(NSString *)key
-{
-    if ([key isEqualToString:@"content_"])
-        [self setContent:value];
-    
-    return [super setValue:value forKey:key];
 }
 
 - (NSString *)content
@@ -214,6 +199,28 @@
     printf("%s\n", [string cStringUsingEncoding:NSUTF8StringEncoding]);
 }
 
+- (id)valueForKey:(NSString *)key
+{
+    if ([key isEqualToString:@"version_"])
+        return [self version];
+    if ([key isEqualToString:@"content_"])
+        return [self content];
+    if ([key isEqualToString:@"userAgent_"])
+        return [self userAgent];
+    
+    return [super valueForKey:key];
+}
+
+- (void)setValue:(id)value forKey:(NSString *)key
+{
+    if ([key isEqualToString:@"content_"])
+        [self setContent:value];
+    if ([key isEqualToString:@"userAgent_"])
+        [self setUserAgent:value];
+    
+    return [super setValue:value forKey:key];
+}
+
 @end
 
 
@@ -267,6 +274,7 @@ didFinishLoadForFrame:(WebFrame *)frame
         || !strcmp(key, "userAgent_")
         || !strcmp(key, "version_")
         || !strcmp(key, "content_")
+        || !strcmp(key, "userAgent_")
         ) {
         return NO;
     }
@@ -297,12 +305,12 @@ didFinishLoadForFrame:(WebFrame *)frame
         return @"loadStatus";
     if (!strcmp(key, "state_"))
         return @"state";
-    if (!strcmp(key, "userAgent_"))
-        return @"userAgent";
     if (!strcmp(key, "version_"))
         return @"version";
     if (!strcmp(key, "content_"))
         return @"content";
+    if (!strcmp(key, "userAgent_"))
+        return @"userAgent";
     
     return [NSString stringWithCString:key
                               encoding:NSUTF8StringEncoding];

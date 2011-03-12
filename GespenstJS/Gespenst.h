@@ -18,7 +18,11 @@
     NSString *loadStatus_;
     NSString *script_;
     NSString *state_;
-    NSString *content_; // Unused but should exist for certain reason...
+    
+    // Unused but should exist for a certain reason...
+    NSString *version_;
+    NSString *content_;
+    NSString *userAgent_;
 }
 
 @property(retain) NSWindow *window;
@@ -29,6 +33,7 @@
 @property(retain) NSString *script;
 @property(retain) NSString *state;
 @property(assign) NSString *content;
+@property(assign) NSString *userAgent;
 
 - (void)execute:(NSString *)script;
 
