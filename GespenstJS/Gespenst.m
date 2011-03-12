@@ -155,8 +155,7 @@
     // Render PDF
     if ([[[filePath pathExtension] lowercaseString] isEqualToString:@"pdf"]) {
         NSData *data = [view dataWithPDFInsideRect:rect];
-        [data writeToFile:fileName atomically:NO];
-        return YES;
+        return [data writeToFile:fileName atomically:NO];
     }
     
     // Render PNG
@@ -164,9 +163,7 @@
     [[self webView] cacheDisplayInRect:rect toBitmapImageRep:rep];
     NSData *data = [rep representationUsingType:NSPNGFileType
                                      properties:nil];
-    [data writeToFile:filePath atomically:NO];
-    
-    return NO;
+    return [data writeToFile:filePath atomically:NO];
 }
 
 - (void)sleep:(NSInteger)msecs
