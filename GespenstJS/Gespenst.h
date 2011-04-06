@@ -11,6 +11,18 @@
 
 
 @interface Gespenst : NSObject {
+    NSWindow *window_;
+    WebView *webView_;
+    NSArray *args_;
+    NSUInteger returnValue_;
+    NSString *loadStatus_;
+    NSString *script_;
+    NSString *state_;
+    
+    // Unused but should exist for a certain reason...
+    NSString *version_;
+    NSString *content_;
+    NSString *userAgent_;
 }
 
 @property(retain) NSWindow *window;
@@ -20,7 +32,6 @@
 @property(retain) NSString *loadStatus;
 @property(retain) NSString *script;
 @property(retain) NSString *state;
-@property(assign, readonly) NSString *version;
 @property(assign) NSString *content;
 @property(assign) NSString *userAgent;
 

@@ -31,9 +31,8 @@
 @synthesize loadStatus = loadStatus_;
 @synthesize script = script_;
 @synthesize state = state_;
-@synthesize version = version_;
-@synthesize content = content_;
-@synthesize userAgent = userAgent_;
+@dynamic content;
+@dynamic userAgent;
 
 - (id)init
 {
