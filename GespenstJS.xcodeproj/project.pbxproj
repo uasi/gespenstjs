@@ -110,6 +110,7 @@
 				585D7ACD13291FCF001501F0 /* Sources */,
 				585D7ACE13291FCF001501F0 /* Frameworks */,
 				585D7ACF13291FCF001501F0 /* CopyFiles */,
+				58DC27A2134C931800D41420 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -144,6 +145,22 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58DC27A2134C931800D41420 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$CONFIGURATION\" == \"Release\" ]; then\n    sh \"$SRCROOT/Tools/create_tarball.sh\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		585D7ACD13291FCF001501F0 /* Sources */ = {
